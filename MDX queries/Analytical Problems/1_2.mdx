@@ -1,5 +1,0 @@
-WITH MEMBER [people per car] as [Measures].[Ratio Population To Cars] / [Measures].[RENTAL Count]
-
-SELECT NON EMPTY { [people per car], [Measures].[RENTAL Count] } ON COLUMNS,
-NON EMPTY { ([CITY].[City Name].[City Name].ALLMEMBERS ) } ON ROWS 
-FROM [Car Sharing DW]

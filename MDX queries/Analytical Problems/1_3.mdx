@@ -1,5 +1,0 @@
-WITH MEMBER [km^2 per car] as [Measures].[Ratio Area To Cars] / [Measures].[RENTAL Count] 
-
-SELECT NON EMPTY { [km^2 per car], [Measures].[RENTAL Count] } ON COLUMNS, NON EMPTY { ([CITY].[City Name].[City Name].ALLMEMBERS ) }
-ON ROWS 
-FROM [Car Sharing DW]
