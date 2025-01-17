@@ -1,0 +1,18 @@
+1;Szczecin;zachodnio-pomorskie;396168;300
+2;Gdansk;pomorskie;486022;262
+3;Olsztyn;warminsko-mazurskie;170225;88
+4;Bialystok;podlaskie;294242;102
+5;Gorzow Wielkopolski;lubuskie;119964;86
+6;Zielona Gora;lubuskie;140002;278
+7;Poznan;wielkopolskie;546859;262
+8;Bydgoszcz;kujawsko-pomorskie;337666;176
+9;Torun;kujawsko-pomorskie;198273;116
+10;Warszawa;mazowieckie;1860281;517
+11;Wroclaw;dolnoslaskie;672929;293
+12;Lodz;lodzkie;670642;293
+13;Kielce;swietokrzyskie;186894;110
+14;Lublin;lubelskie;334681;147
+15;Opole;opolskie;127387;149
+16;Katowice;slaskie;285711;165
+17;Krakow;malopolskie;800653;327
+18;Rzeszow;podkarpackie;195871;129
