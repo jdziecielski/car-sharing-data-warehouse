@@ -1,0 +1,44 @@
+SELECT {[Measures].[RENTAL Count]} ON COLUMNS, NON EMPTY 
+		ORDER (
+				(	[DATE].[Year].[Year], [DATE].[Month].[Month],
+					[CAR].[Make].[Make],
+					[CAR].[Model].[Model],
+					[EQUIPMENT].[Abs].[Abs],
+					[EQUIPMENT].[Air Conditioning].[Air Conditioning],
+					[EQUIPMENT].[Android Auto].[Android Auto],
+					[EQUIPMENT].[Apple Carplay].[Apple Carplay],
+					[EQUIPMENT].[Asc].[Asc],
+					[EQUIPMENT].[Gps].[Gps],
+					[EQUIPMENT].[Heated Seats].[Heated Seats],
+					[EQUIPMENT].[Transmission].[Transmission],
+					[EQUIPMENT].[Ventilated Seats].[Ventilated Seats]
+					) 
+			, [Measures].[RENTAL Count], BDESC)
+	ON ROWS
+FROM [Carsharing DW];
+
+
+
+SELECT {[Measures].[RENTAL Count]} ON COLUMNS, NON EMPTY
+	TOPCOUNT
+		(
+			(
+				[DATE].[Year].[Year], 
+				[DATE].[Month].[Month],
+				[CAR].[Make].[Make],
+				[CAR].[Model].[Model],
+				[EQUIPMENT].[Abs].[Abs],
+				[EQUIPMENT].[Air Conditioning].[Air Conditioning],
+				[EQUIPMENT].[Android Auto].[Android Auto],
+				[EQUIPMENT].[Apple Carplay].[Apple Carplay],
+				[EQUIPMENT].[Asc].[Asc],
+				[EQUIPMENT].[Gps].[Gps],
+				[EQUIPMENT].[Heated Seats].[Heated Seats],
+				[EQUIPMENT].[Transmission].[Transmission],
+				[EQUIPMENT].[Ventilated Seats].[Ventilated Seats]
+			), 
+			10, 
+			[Measures].[RENTAL Count]
+		)
+	ON ROWS
+FROM [Carsharing DW]

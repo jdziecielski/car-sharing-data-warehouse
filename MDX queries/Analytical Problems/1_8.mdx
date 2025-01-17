@@ -1,0 +1,6 @@
+WITH MEMBER [Male to Female] as [Measures].[Ratio Male To Female] / [Measures].[RENTAL Count]
+
+
+SELECT NON EMPTY { [Male to Female], [Measures].[RENTAL Count] } ON COLUMNS,
+NON EMPTY { ([CITY].[City Name].[City Name].ALLMEMBERS ) } ON ROWS 
+FROM [Car Sharing DW] 

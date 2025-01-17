@@ -1,0 +1,3 @@
+SELECT NON EMPTY { [Measures].[RENTAL Count] } ON COLUMNS, 
+NON EMPTY { ([CITY].[City Name].[City Name].ALLMEMBERS * [DATE].[Season].[Season].ALLMEMBERS ) } ON ROWS 
+FROM ( SELECT ( { [DATE].[Season].&[summer], [DATE].[Season].&[winter] } ) ON COLUMNS FROM [Car Sharing DW])

@@ -1,0 +1,4 @@
+SELECT NON EMPTY { [Measures].[RENTAL Count] } ON COLUMNS,
+NON EMPTY { ([CAR].[Make].[Make].ALLMEMBERS * [CAR].[Model].[Model].ALLMEMBERS * [CITY].[City Name].[City Name].ALLMEMBERS ) } 
+ON ROWS 
+FROM [Car Sharing DW] 
